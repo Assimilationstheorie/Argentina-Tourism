@@ -1,0 +1,193 @@
+<?php
+ //Enter Your Txtlocal email or username
+ $username = 'salonikyal1996@gmail.com';
+ //Enter your txtlocal ApiHash
+ $ApiHash = 'bc204aa8a304a3eec5504d2da57a4f314a286516';
+ 
+ //If user click on send button then run below codes
+ if(isset($_POST['submit'] )=== true){
+  $senderName = $_POST['name'];
+  $sendTo  = $_POST['number'];
+  $text   = $_POST['message'];
+  //If above fields are not empty then then run below codes
+  if(!empty($senderName)&&!empty($sendTo)&&!empty($text)){
+  // Message details
+  $number  = $sendTo;
+  $sender  = urlencode($senderName);
+  $message = rawurlencode($text);
+  
+   // Prepare data for POST request
+  $data = array('username' => $username, 'hash' => $ApiHash, 'numbers' => $number, "sender" => $sender, "message" => $message, );
+  
+  // Send the POST request with cURL
+  $ch = curl_init('http://api.txtlocal.com/send/');
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $response = curl_exec($ch);
+  curl_close($ch);
+  
+  // Process your response here
+  if($data = json_decode($response ,true)){
+	  echo'Sent';
+  }
+
+   }
+ }
+?>
+<!doctype html>
+<html>
+ <head>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css"/>
+ </head>
+ <style  type="text/css">
+ *{
+ margin:auto; 
+ padding:0px; 
+ width:auto; 
+ height:auto;
+ }
+ 
+body{
+ font-family: 'Lora', serif;
+ background: #19CDE4;
+ Color:white;
+}
+ul{list-style:none;}
+ul li{
+ margin:5px 5px;
+}
+h1{
+ font-style: italic;
+ text-shadow: -2px 2px 10px #9c9c9c;
+}
+
+h3{
+ font-style: italic;
+ text-shadow:-2px 2px 10px #9c9c9c;
+}
+a{text-decoration:none;color:white;}
+.wrapper{
+ width: 1000px;
+ margin-top: 40px;
+}
+
+.container{
+ width:100%;
+ margin:0px auto;
+}
+
+.main-heading{
+ margin-top:20%;
+ font-size:32px;
+}
+.main-heading h1{
+ text-align:center;
+}
+.last-heading{
+ margin-top:30%;
+ font-size:32px;
+}
+.last-heading h1{
+ text-align:center;
+} 
+
+.link-heading{
+ margin: 10px 0px;
+ padding:10px;
+}
+.link-heading h3{
+ text-align:center;
+}
+
+
+
+
+.input-box ul{
+ margin: 100px auto;
+ text-align: center;
+}
+
+
+.input-box{
+ width:80%;
+ margin:10px auto;
+}
+
+.input-box input[type="text"]{
+ padding:10px ;
+ width:300px;
+ color: #635f5f;
+ border: 1px solid #ededed;
+ border-radius:4px;
+}
+
+.input-box textarea{
+ width:300px;
+ color: #635f5f;
+ border: 1px solid #ededed;
+ border-radius:4px;
+ padding: 10px;
+}
+
+.input-box input[type="submit"]{
+ width:100px;
+ height:40px;
+ padding:5px;
+ border:1px solid #ccc;
+ background: #fff;
+ cursor: pointer;
+}
+
+.footer-container{
+ text-align:center;
+}
+ </style>
+<body>
+
+<div class="wrapper">
+ 
+ <div class="container">
+ 
+  <div class="main-heading">
+   <?php
+    //if sms sent then show success message
+     if(@$data['status'] === "success"){ 
+     echo '<h1>"Your message has been sent."</h1>';
+    }else{
+     echo '<h1>"Now Enter Your Mobile Number And Hit Send"</h1>';
+
+    }
+   ?>
+  </div>
+  <form method="post">
+  <div class="input-box">
+   <ul>
+    <li>
+     <input type="text" name="name" placeholder="Enter your name"></input>
+    </li>
+    <li>
+     <input type="text" name="number" placeholder="Enter number with country code to send sms"></input>
+    </li>
+    <li>
+     <textarea type="textarea" name="message" placeholder="Type Your Message"></textarea>
+    </li>
+    <li>
+     <input type="submit" name="submit" value="SEND"></input>
+    </li>
+   </ul>
+   
+  </div>
+  </form>
+ </div><!-- end container -->
+ 
+ <div class="footer">
+  <div class="footer-container">
+   All credit goes to  <a style="text-decoration:underline;" href="http://www.meralesson.com">meralesson.com</a> team.
+  </div>
+ </div><!-- end footer-->
+ 
+</div><!-- end wrapper -->
+</body>
+</html>

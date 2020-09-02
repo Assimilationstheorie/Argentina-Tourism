@@ -1,0 +1,388 @@
+body 
+{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image:url("../images/background2.jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+	min-height:100%;
+	display:block;
+	background-color:#00001a;
+}
+@font-face 
+{
+	font-family: myFirstFont;
+	src: url(../fonts/Aladin-Regular.ttf);
+}
+/*fixed navigation tabs*/
+#top-fixed
+{
+	height:  55px;
+	width: 100%;	
+	float:  left;
+	position:fixed;
+	z-index:2000;
+	background-color:#FFBC96;
+}
+#nav
+{
+	height:55px;
+	width:85%;
+	float:left;
+	display:block;
+	overflow:hidden;
+	//background-color:pink;
+}
+#user
+{
+	float:right;
+	height:45px;
+	width:15%;
+	margin-top:10px;
+	//right:5px;
+	//background-color:red;
+}
+
+/*Navigation styles*/
+ul
+{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	font-family: myFirstFont;
+	font-size: 30px;
+	//background-color:DarkSlateBlue ;
+}
+li
+{
+	float:left;
+	//border-right: 1px solid #ffffff;
+}
+li a, .dropbtn
+{
+	display:inline-block;
+	color:white;
+	text-align:center;
+	padding:0px 25px 0px 25px;
+	line-height:55px;
+	text-decoration:none;
+}
+li a:hover, .dropdown:hover .dropbtn
+{	
+	color:#FF735E;
+	//border-bottom: 3px solid #ffffff;
+	//background-color:DarkSlateBlue;
+}
+.title
+{
+	text-decoration: none;
+}
+
+#wrapper{
+	//margin:auto;
+	min-height:100%;
+	width:1200px;;
+}
+
+/*header with logo, name and login,signup*/
+#header
+{
+	height:  160px;
+	//width:  90%;	
+	margin-top: 50px;
+	display:inline-block;
+	//background-color:cyan;
+}	
+#header-logo
+{
+	height: 160px;
+	width: 200px;
+	float:left;	
+	background:url("../images/logo2.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top:5px;	
+	//background-color: yellow;
+}
+#header-title
+{
+	height: 160px;
+	width:  950px;	
+	float:left;
+	font-family: myFirstFont;
+	font-size: 35px;
+	color: white;	
+	margin-left:50px;
+	//background-color: green;
+}
+
+/*Inner navigation tabs*/
+#content{
+	height: 50px;
+	width:   1200px;	
+	line-height: 50px;
+	//display: inline-block;
+	font-size: 50;
+	//color:black;
+}
+
+/*content part with heading*/
+#content-heading
+{
+	height: 100px;
+	width:    1200px;	
+	line-height: 100px;	
+	display: block;
+	font-size: 50px;	
+	background-color:  #c0c0c0 ;
+	//margin-bottom:0px;
+}
+
+/*The main content part in forms*/
+#contents
+{
+	height:  720px;
+	width:   1200px;
+	display: block;
+	//margin-top:0px;
+	margin-bottom:30px;
+	background-color: #c0c0c0 ;	
+}
+
+/*content part in plan ur trip*/
+#contents1
+{
+	height:  250px;
+	width:    1150px;
+	//display: inline-block;
+	//background-color: #c0c0c0;
+	float: left;
+	//margin:0px 10px 0px 10px;
+	//position:relative;
+	margin-left:20px;
+	margin-top:10px;
+}	
+#contents2
+{
+	height: 470px;
+	width:    550px;
+	//display: inline-block;
+	//background-color: #c0c0c0;
+	float: left;
+	margin-left:50px;
+	//position:relative;
+
+	
+}	
+#contents3
+{
+	height: 450px;
+	width:    580px;
+	//display: inline-block;
+	//background-color: #c0c0c0;
+	float:left;
+	margin-right:20px;
+	//margin:0px 10px 0px 10px;
+	position:relative;
+	
+}	
+	
+
+/*Footer part*/	
+#footer
+{
+	height: 80px;
+	//width: 1200px;	
+	//float: left;			
+	//margin:0px 50px 0px 50px;
+	background-color:#FFBC96;
+
+}
+#footer1
+{
+	height: 30px;
+	width: 1200px;	
+	float: left;
+	margin:5px;
+	//background-color: yellow;
+}
+#footer2
+{
+	height: 30px;
+	width: 1200px;	
+	float: left;
+	margin:5px;	
+	//background-color: blue;	
+}
+
+/*For color and hover in the link part*/
+div a
+{
+	color:white;
+}
+div a:hover{
+	color:#FF735E;
+}
+
+/*Color in content-heading*/
+div b   
+{
+	color: #737373;
+	font-family: myFirstFont;
+	font-size:65px;
+}
+
+/*Color in navigation hover tabs*/
+c{
+	color:#FF735E;
+    border-bottom: 2px solid #FF735E;
+	//padding-top:3px;
+}
+
+/*form part editing*/
+m{
+	color:red;
+	padding:0;
+	margin:0;
+}
+td {
+	padding: 20px;
+}
+input, textarea{
+	//background: transparent;
+	color: black;
+	width: 300px;
+	height:40px;
+	font-size: 22px;
+}
+Select{
+	color:#999999;
+	width: 300px;
+	height:40px;
+	font-size: 20px;
+}
+textarea:focus, input:focus,Select:focus{
+    color: black;
+}
+.btn{width:200px;
+margin-right:40px;}
+.btn:hover{
+	//background-color:gray;
+	cursor:pointer;
+	color:gray;
+}		
+.link {font-size:20px;padding:0; }
+.link a{
+	color:737373;
+}
+
+
+/*plan your trip editing*/
+input.button{
+	width:150px;
+}
+input.people{
+	width:150px;
+	color:#999999;
+}
+select.date{
+	width:95px;
+	font-size: 20px;
+}
+select.select{
+	font-size: 20px;
+}
+td.plan{
+	padding: 10px;
+}
+p.abc{
+	font-size:20px;
+}
+b.inner-heading{
+	font-size:40px;
+	margin-left:20px;
+}
+
+n{
+font-size:25px;
+color:#737373;
+font-weight: bold;
+}
+
+/*editing in explore part*/
+p.explore{
+	margin:15px;
+	font-size:25px;
+	text-align:left;
+}
+
+p.contact{
+	margin:15px;
+	font-size:25px;
+	text-align:center;
+	
+}
+
+/*For Modal box*/
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 500px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #c0c0c0;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+	background: #00d9ff;
+}
+.modalbutton{
+	padding-left:160px;
+}
+.modalselect{
+	padding-top:50px;
+}
+

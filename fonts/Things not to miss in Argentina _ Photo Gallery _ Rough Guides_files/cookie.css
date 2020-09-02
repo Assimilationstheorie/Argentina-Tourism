@@ -1,0 +1,23 @@
+.home, .page-template-gallery-home-template-php {
+	height: calc(100% - 44px);
+	height: -webkit-calc(100% - 44px);
+	height: -moz-calc(100% - 44px);
+}
+
+.home #container, .page-template-gallery-home-template-php #container {
+	height: calc(100% - 44px);
+	height: -webkit-calc(100% - 44px);
+	height: -moz-calc(100% - 44px);
+}
+
+.home #container .header, .page-template-gallery-home-template-php #container .header {
+	position: relative;
+}
+
+.home.admin-bar #container .header, .page-template-gallery-home-template-php.admin-bar #container .header {
+	top: auto;
+}
+
+.lt-ie9 .home #container, .lt-ie9 .page-template-gallery-home-template-php #container {
+	position: relative;
+}

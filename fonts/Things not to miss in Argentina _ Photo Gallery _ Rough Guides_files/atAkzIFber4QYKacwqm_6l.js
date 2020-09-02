@@ -1,0 +1,1 @@
+/**/Tynt.sc({"d":true,"domain":"roughguides.com","p":["vl"]})
