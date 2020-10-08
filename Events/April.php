@@ -109,7 +109,7 @@
 								
 						
 						?>
-								<a href="../Login.php">LOGIN</a><a> | </a>
+								<a href="../Login.php">LOGIN</a><span> | </span>
 								<a href="../SignUp.php">SIGN UP</a>	
 						<?php
 					
